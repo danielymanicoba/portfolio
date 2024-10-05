@@ -1,0 +1,108 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 3rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: url("../img/detalhe.svg")  no-repeat center;
+  position: absolute;
+  top: -22px;
+  left: -25px;
+  z-index: -1;
+}
+
+.introducao-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 600px;
+}
+
+.introducao a {
+  height: 30px;
+  transition: 0.3s easy;
+}
+
+.botao-cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  border-radius: 5px;
+  border: 2px solid #5659da;
+  background: white;
+  width: 150px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #5659da;
+  transition: 0.3s ease;
+}
+
+.botao-cv:hover {
+  color: #bbb;
+  background: linear-gradient(180deg, #5659da, #b629f8);
+  filter: brightness(1.5);
+}
+
+.botao-cv img {
+  width: 16px;
+  transition: 0.3s ease;
+}
+
+.botao-cv:hover img {
+  filter: brightness(0) invert(0.7);
+}
+
+.botao-github:hover {
+  filter: brightness(1.5);
+}
+
+.botao-linkedin:hover {
+  filter: brightness(1.5);
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .introducao img {
+    display: none;
+  }
+}
