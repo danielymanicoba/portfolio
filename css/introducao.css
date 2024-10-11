@@ -102,7 +102,17 @@
   .introducao {
     grid-template-columns: 1fr;
   }
-  .introducao img {
+
+  .introducao h1 {
+    font-size: 1.4rem;
+  }
+  .introducao > img {
     display: none;
+  }
+  .introducao-botoes {
+    width: 250px;
+  }
+  .introducao-botoes a {
+    font-size: 0.8rem;
   }
 }
